@@ -11,7 +11,7 @@ public class RussianRulletGame {
         System.out.println("Classic mode, or modernisation? Classic this is there 1 bullet and size of drum = 6?" + "\n" + "Enter 0 if classic mode or enter 1 if modernisation mode.");
         int plChooseGameMode = scanner.nextInt();
         if (plChooseDiffOfProgram <= 0) {
-            if (plChooseGameMode >= 0) {
+            if (plChooseGameMode <= 0) {
                 System.out.println("Choose the difficult. Arcade mode - 0 (on score), HardCore mode - 1 (on life & redemption)");
                 plChooseGameDiff = scanner.nextInt();
                 System.out.println(SimpleIntVersion(6, 1, plChooseGameDiff));
@@ -62,8 +62,8 @@ public class RussianRulletGame {
                 System.out.println("John waited, waited, and starved to death.");
                 System.exit(0);
             } else System.out.println("And the cowboys entered the bar.");
-            if (plChooseDiffOfProgram >= 2) {
-                if (plChooseGameMode >= 0) {
+            if (plChooseDiffOfProgram == 2) {
+                if (plChooseGameMode <= 0) {
                     System.out.println("Choose the difficult. Arcade mode - 0 (on score), HardCore mode - 1 (on life & redemption)");
                     plChooseGameDiff = scanner.nextInt();
                     System.out.println(SimpleIntVersionMulti(6, 1, plChooseGameDiff, plChooseHowManyPlayersInTheGame));

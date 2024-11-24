@@ -11,10 +11,10 @@ public class RRGtest {
         System.out.println("Classic mode, or modernisation? Classic this is there 1 bullet and size of drum = 6?" + "\n" + "Enter 0 if classic mode or enter 1 if modernisation mode.");
         int plChooseGameMode = scanner.nextInt();
         if (plChooseDiffOfProgram <= 0) {
-            if (plChooseGameMode >= 0) {
+            if (plChooseGameMode <= 0) {
                 System.out.println("Choose the difficult. Arcade mode - 0 (on score), HardCore mode - 1 (on life & redemption)");
                 plChooseGameDiff = scanner.nextInt();
-                System.out.println(SimpleIntVersion(6, 1, plChooseDiffOfProgram, 2));
+                System.out.println(SimpleIntVersion(6, 1, plChooseGameDiff, 2));
             } else {
                 System.out.println("Enter how many players will be in the game");
                 int plChooseHowManyPlayersInTheGame = scanner.nextInt();
@@ -37,7 +37,7 @@ public class RRGtest {
             if (plChooseGameMode == 0) {
                 System.out.println("Choose the difficult. Arcade mode - 0 (on score), HardCore mode - 1 (on life & redemption)");
                 plChooseGameDiff = scanner.nextInt();
-                System.out.println(HardBooleanVersion(6, 1, plChooseDiffOfProgram, 2));
+                System.out.println(HardBooleanVersion(6, 1, plChooseGameDiff, 2));
             } else {
                 System.out.println("Enter how many players will be in the game");
                 int plChooseHowManyPlayersInTheGame = scanner.nextInt();
