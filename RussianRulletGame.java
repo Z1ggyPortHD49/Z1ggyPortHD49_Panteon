@@ -2,7 +2,7 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
 
-//Ура фурстрация, потеря близких и дорогих тебе людей = графодр*черство УРА!!!
+//Ура фурстрация, потеря близких и дорогих тебе людей = графодр*черство УРА!!! ОТ ЭТОГО НАДО КАЙФОВАТЬ КАК ОТ ПТСР?
 public class RussianRulletGame {
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
