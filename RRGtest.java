@@ -254,26 +254,26 @@ public class RRGtest {
                         }
                     }
                 }
-                return advantage;
             }
-
-            static int HardBooleanVersion ( int sizeDrum, int howManyBullets, int gameDiff, int howManyPlayersInTheGame) throws
-            InterruptedException { //Work In Progress (WIP)
-            Random random = new Random();
-
-            HashSet<Integer> boxWithDeath = new HashSet<>();
-            int advantage = 0;
-            int hitCounter = 0;
-
-            while (boxWithDeath.size() < howManyBullets) {
-                int randomNumber = random.nextInt(sizeDrum) + 1;
-                boxWithDeath.add(randomNumber);
-            }
-            boolean youTakeGun = random.nextBoolean();
-            System.out.println("Game Started");
-            Thread.sleep(750);
-            return advantage;
         }
+        return advantage;
+    }
+     static int HardBooleanVersion(int sizeDrum, int howManyBullets, int gameDiff, int howManyPlayersInTheGame) throws InterruptedException { //Work In Progress (WIP)
+        Random random = new Random();
+
+        HashSet<Integer> boxWithDeath = new HashSet<>();
+        int advantage = 0;
+        int hitCounter = 0;
+
+        while (boxWithDeath.size() < howManyBullets) {
+            int randomNumber = random.nextInt(sizeDrum) + 1;
+            boxWithDeath.add(randomNumber);
         }
+        boolean youTakeGun = random.nextBoolean();
+        System.out.println("Game Started");
+        Thread.sleep(750);
+        return advantage;
+    }
+}
 
 //Ура фурстрация, потеря близких и дорогих тебе людей = графодр*черство УРА!!! ОТ ЭТОГО НАДО КАЙФОВАТЬ КАК ОТ ПТСР? Сквад, Тарков, Раст? НЕ ТРОГАЙТЕ МНЕ И ИРЛ ХВАТАЕТ
