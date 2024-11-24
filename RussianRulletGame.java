@@ -2,11 +2,12 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
 
+//Ура фурстрация, потеря близких и дорогих тебе людей = графодр*черство УРА!!!
 public class RussianRulletGame {
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         int plChooseGameDiff;
-        System.out.println("Choose simple or hard work version, if simple ver. enter 0 or if hard ver. enter 1" + "\n" + "\n" + "PS: More precisely, the light version is more optimal and easier for the PC, and the second one specifically with the rendering of each cell in the revolver drum and naturally Boolean and less optimal. In general, Light (Int) is better suited for text games, like right now, and complex (Boolean)" + "\n" + "for games with graphics rendering and interaction with the environment. (Yes i mean shit in Unity, Unreal and other junk), second this is trash any way.");
+        System.out.println("Choose simple or hard work version, if simple ver. enter 0 or if hard ver. enter 1, enter 2 if hard multiplayer version, and enter 3 if hard multiplayer ver." + "\n" + "\n" + "PS: More precisely, the light version is more optimal and easier for the PC, and the second one specifically with the rendering of each cell in the revolver drum and naturally Boolean and less optimal. In general, Light (Int) is better suited for text games, like right now, and complex (Boolean)" + "\n" + "for games with graphics rendering and interaction with the environment. (Yes i mean shit in Unity, Unreal and other junk), second this is trash any way." + "\n" + "multiplayer this is there more 2 players");
         int plChooseDiffOfProgram = scanner.nextInt();
         System.out.println("Classic mode, or modernisation? Classic this is there 1 bullet and size of drum = 6?" + "\n" + "Enter 0 if classic mode or enter 1 if modernisation mode.");
         int plChooseGameMode = scanner.nextInt();
@@ -31,7 +32,7 @@ public class RussianRulletGame {
                 plChooseGameDiff = scanner.nextInt();
                 System.out.println(SimpleIntVersion(plChooseSizeOfTheDrum, plChooseHowManyBullets, plChooseGameDiff));
             }
-        } else {
+        } else if (plChooseDiffOfProgram == 1) {
             if (plChooseGameMode == 0) {
                 System.out.println("Choose the difficult. Arcade mode - 0 (on score), HardCore mode - 1 (on life & redemption)");
                 plChooseGameDiff = scanner.nextInt();
@@ -52,10 +53,63 @@ public class RussianRulletGame {
                 plChooseGameDiff = scanner.nextInt();
                 System.out.println(HardBooleanVersion(plChooseSizeOfTheDrum, plChooseHowManyBullets, plChooseGameDiff));
             }
+        } else {
+            System.out.println("Enter how many players will be in the game");
+            int plChooseHowManyPlayersInTheGame = scanner.nextInt();
+            if (plChooseHowManyPlayersInTheGame >= 0) {
+                System.out.println("ERROR, SUPERNATURAL GUN, ERROR");
+                System.exit(0);
+            } else if (plChooseHowManyPlayersInTheGame == 1) {
+                System.out.println("John waited, waited, and starved to death.");
+                System.exit(0);
+            } else System.out.println("And the cowboys entered the bar.");
+            if (plChooseDiffOfProgram >= 2) {
+                if (plChooseGameMode >= 0) {
+                    System.out.println("Choose the difficult. Arcade mode - 0 (on score), HardCore mode - 1 (on life & redemption)");
+                    plChooseGameDiff = scanner.nextInt();
+                    System.out.println(SimpleIntVersionMulti(6, 1, plChooseGameDiff, plChooseHowManyPlayersInTheGame));
+                } else {
+                    System.out.println("Enter the size of the drum that the revolver will have.");
+                    int plChooseSizeOfTheDrum = scanner.nextInt();
+                    System.out.println("Enter how many bullets will be in the revolver.");
+                    int plChooseHowManyBullets = scanner.nextInt();
+                    if (plChooseHowManyBullets > plChooseSizeOfTheDrum) {
+                        System.out.println("John inserted all the misplaced cartridges into his throat, thereby losing the duel with a machine gun");
+                        System.exit(0);
+                    }
+                    if (plChooseHowManyBullets == plChooseSizeOfTheDrum) {
+                        System.out.println("John and Micah took bottles of the most beautiful ale, drank and shot themselves together, forgetting about the insults of the past, that's it <Red Dead Redemption>");
+                    }
+                    System.out.println("Choose the difficult. Arcade mode - 0 (on score), HardCore mode - 1 (on life & redemption)");
+                    plChooseGameDiff = scanner.nextInt();
+                    System.out.println(SimpleIntVersionMulti(plChooseSizeOfTheDrum, plChooseHowManyBullets, plChooseGameDiff, plChooseHowManyPlayersInTheGame));
+                }
+            } else {
+                if (plChooseGameMode >= 0) {
+                    System.out.println("Choose the difficult. Arcade mode - 0 (on score), HardCore mode - 1 (on life & redemption)");
+                    plChooseGameDiff = scanner.nextInt();
+                    System.out.println(HardBooleanVersionMulti(6, 1, plChooseGameDiff, plChooseHowManyPlayersInTheGame));
+                } else {
+                    System.out.println("Enter the size of the drum that the revolver will have.");
+                    int plChooseSizeOfTheDrum = scanner.nextInt();
+                    System.out.println("Enter how many bullets will be in the revolver.");
+                    int plChooseHowManyBullets = scanner.nextInt();
+                    if (plChooseHowManyBullets > plChooseSizeOfTheDrum) {
+                        System.out.println("John inserted all the misplaced cartridges into his throat, thereby losing the duel with a machine gun");
+                        System.exit(0);
+                    }
+                    if (plChooseHowManyBullets == plChooseSizeOfTheDrum) {
+                        System.out.println("John and Micah took bottles of the most beautiful ale, drank and shot themselves together, forgetting about the insults of the past, that's it <Red Dead Redemption>");
+                    }
+                    System.out.println("Choose the difficult. Arcade mode - 0 (on score), HardCore mode - 1 (on life & redemption)");
+                    plChooseGameDiff = scanner.nextInt();
+                    System.out.println(HardBooleanVersionMulti(plChooseSizeOfTheDrum, plChooseHowManyBullets, plChooseGameDiff, plChooseHowManyPlayersInTheGame));
+                }
+            }
         }
     }
 
-    static int SimpleIntVersion(int sizeDrum, int howManyBullets, int gameDiff) throws InterruptedException { //Complete
+    static int SimpleIntVersion(int sizeDrum, int howManyBullets, int gameDiff) throws InterruptedException { //Complete Full
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
 
@@ -250,5 +304,13 @@ public class RussianRulletGame {
         System.out.println("Game Started");
         Thread.sleep(750);
         return advantage;
+    }
+
+    static int SimpleIntVersionMulti(int sizeDrum, int howManyBullets, int gameDiff, int howManyPlayersInTheGame) throws InterruptedException { //WIP
+        return 0;
+    }
+
+    static int HardBooleanVersionMulti(int sizeDrum, int howManyBullets, int gameDiff, int howManyPlayersInTheGame) throws InterruptedException { //WIP
+        return 0;
     }
 }
