@@ -6,7 +6,7 @@ public class RRGtest {
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         int plChooseGameDiff;
-        System.out.println("\n" + "Choose simple or hard work version, if simple ver. enter 0 or if hard ver. enter 1" + "\n" + "PS: More precisely, the light version is more optimal and easier for the PC, and the second one specifically with the rendering of each cell in the revolver drum and naturally Boolean and less optimal. In general, Light (Int) is better suited for text games, like right now, and complex (Boolean)" + "\n" + "for games with graphics rendering and interaction with the environment. (Yes i mean shit in Unity, Unreal and other junk), second this is trash any way.");
+        System.out.println("Choose simple or hard work version, if simple ver. enter 0 or if hard ver. enter 1" + "\n" + "PS: More precisely, the light version is more optimal and easier for the PC, and the second one specifically with the rendering of each cell in the revolver drum and naturally Boolean and less optimal. In general, Light (Int) is better suited for text games, like right now, and complex (Boolean)" + "\n" + "for games with graphics rendering and interaction with the environment. (Yes i mean shit in Unity, Unreal and other junk), second this is trash any way.");
         int plChooseDiffOfProgram = scanner.nextInt();
         System.out.println("Classic mode, or modernisation? Classic this is there 1 bullet and size of drum = 6?" + "\n" + "Enter 0 if classic mode or enter 1 if modernisation mode.");
         int plChooseGameMode = scanner.nextInt();
