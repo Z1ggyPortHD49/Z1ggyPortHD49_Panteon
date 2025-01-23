@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Ren {
@@ -12,21 +13,16 @@ public class Ren {
         arrayList = new ArrayList<>();
         array = new int[]{6, 5, 4, 5, 6, 11, 5, 4, 8, 7, 8};
         for (int i = 1; i < array.length - 1; i++) {
-            if (array[i] < array[i - 1] && array[i] < array[i + 1] && array[i - 1] == array[i + 1])
+            if (array[i] < array[i - 1] && array[i] < array[i + 1])
                 arrayList.add(i);
         }
-        System.out.println(arrayList);
-        /*for (int i = 0; i < n; i++) {5 1 2 3 2 1
-0
-0
-0
-            array[i] = scanner.nextInt();
-        }*/
-        //5 1 2 3 2 1
+        ArrayList<Integer> pak = new ArrayList<>();
         for (int i = 0; i < arrayList.toArray().length; i++) {
-            System.out.println(valley(arrayList.get(i)));
+            pak.add(valley(arrayList.get(i)));
         }
-        System.out.println(palCheck(array));
+        System.out.println(arrayList + " - Все ямы");
+        System.out.println(palCheck(array) + " - Палиндромность");
+        System.out.println(Collections.max(pak) + " - Максимальная палиндромная яма");
     }
 
     static boolean palCheck(int[] array) {
