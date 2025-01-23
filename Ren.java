@@ -22,7 +22,7 @@ public class Ren {
         }
         System.out.println(arrayList + " - Все ямы");
         System.out.println(palCheck(array) + " - Палиндромность");
-        System.out.println(Collections.max(pak) + " - Максимальная палиндромная яма");
+        System.out.println(Collections.max(pak) + Collections.max(pak) - 1 + " - Максимальная палиндромная яма");
     }
 
     static boolean palCheck(int[] array) {
